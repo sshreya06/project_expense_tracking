@@ -5,6 +5,8 @@ from typing import List
 from pydantic import BaseModel
 
 app = FastAPI()
+from backend.logging_setup import setup_logger
+logger = setup_logger("server")
 
 
 class Expense(BaseModel):
@@ -53,3 +55,10 @@ def get_analytics(date_range: DateRange):
         }
 
     return breakdown
+
+
+@app.get("/analytics_monthly/")
+def get_analytics_monthly():
+    logger.info("get_analytics_monthly called")
+    data = db_helper.fetch_monthly_summary()
+    return data

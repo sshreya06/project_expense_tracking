@@ -73,4 +73,35 @@ if __name__ == "__main__":
     summary = fetch_expense_summary("2024-08-01", "2024-08-05")
     for record in summary:
         print(record)'''
+    
+def fetch_monthly_summary():
+    logger.info("fetch_monthly_summary called")
+    with get_db_cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                MONTH(expense_date) as month_number,
+                MONTHNAME(expense_date) as month_name,
+                SUM(amount) as total
+            FROM expenses
+            WHERE YEAR(expense_date) = 2024
+            GROUP BY MONTH(expense_date), MONTHNAME(expense_date)
+            ORDER BY month_number
+        """)
+        data = cursor.fetchall()
+        return data
 
+def fetch_monthly_summary():
+    logger.info("fetch_monthly_summary called")
+    with get_db_cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                MONTH(expense_date) as month_number,
+                MONTHNAME(expense_date) as month_name,
+                SUM(amount) as total
+            FROM expenses
+            WHERE YEAR(expense_date) = 2024
+            GROUP BY MONTH(expense_date), MONTHNAME(expense_date)
+            ORDER BY month_number
+        """)
+        data = cursor.fetchall()
+        return data
