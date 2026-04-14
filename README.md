@@ -12,13 +12,14 @@ A full-stack expense tracking application built with FastAPI, Streamlit, and MyS
 ## Screenshots
 
 ### Add/Update Expenses
-![Add Update](assets/add_update.png)
+<img width="728" height="675" alt="Screenshot 2026-04-14 at 5 44 35 AM" src="https://github.com/user-attachments/assets/4d50ce01-68e4-4239-8702-911bd4d42bb5" />
 
 ### Analytics By Category
-![Analytics Category](assets/analytics_category.png)
+<img width="727" height="697" alt="Screenshot 2026-04-14 at 5 45 13 AM" src="https://github.com/user-attachments/assets/59b556ea-4c4e-45b8-a858-9917dae199f3" />
+<img width="735" height="658" alt="Screenshot 2026-04-14 at 5 45 33 AM" src="https://github.com/user-attachments/assets/6cfe4ee5-6e12-42b4-bf9b-9b3ac049b978" />
 
 ### Analytics By Months
-![Analytics Months](assets/analytics_months.png)
+<img width="729" height="694" alt="Screenshot 2026-04-14 at 5 45 57 AM" src="https://github.com/user-attachments/assets/549ff598-2a20-4c19-b597-ccb2dd91aa4d" />
 
 ## Tech Stack
 - **Backend:** Python, FastAPI, MySQL
